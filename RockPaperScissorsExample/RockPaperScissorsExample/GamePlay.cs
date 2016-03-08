@@ -13,11 +13,13 @@ namespace RockPaperScissorsExample
         public void PlayRound()
         {
             Player p1 = new HumanPlayer("Player 1");
-            Player p2 = new ComputerPlayer("Player 2");
+            //Player p2 = new ComputerPlayer("Player 2");
+            Player p3 = new RockOnly("Rock only player");
 
             MatchResult result = new MatchResult();
             result.Player1_Choice = p1.GetChoice();
-            result.Player2_Choice = p2.GetChoice();
+            //result.Player2_Choice = p2.GetChoice();
+            result.Player2_Choice = p3.GetChoice();
 
             if (result.Player1_Choice == result.Player2_Choice)
             {
@@ -34,7 +36,7 @@ namespace RockPaperScissorsExample
                 result.Match_Result = Result.Loss;
             }
 
-            ProcessResult(p1, p2, result);
+            ProcessResult(p1, p3, result);
         }
 
         private void ProcessResult(Player Player1, Player Player2, MatchResult Result)

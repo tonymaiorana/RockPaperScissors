@@ -49,6 +49,7 @@
     <Compile Include="Implementations\ComputerPlayer.cs" />
     <Compile Include="Implementations\HumanPlayer.cs" />
     <Compile Include="Implementations\Player.cs" />
+    <Compile Include="Implementations\RockOnly.cs" />
     <Compile Include="Interfaces\IChoiceSelector.cs" />
     <Compile Include="MatchResult.cs" />
     <Compile Include="Program.cs" />
