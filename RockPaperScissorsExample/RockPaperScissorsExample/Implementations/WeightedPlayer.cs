@@ -19,7 +19,22 @@ namespace RockPaperScissorsExample.Implementations
         {
             int i = _randomGenerator.Next(1, 11);
 
-            return (Choice) i;
+            if (i >= 1 || i <= 6)
+            {
+                return Choice.Rock;
+            }else if (i > 6 || i <= 8)
+            {
+                return Choice.Paper;
+            }
+            else if (i > 8 || i <= 10)
+            {
+                return Choice.Scissors;
+            }
+            else
+            {
+                return Choice.Unknown;
+            }
+
         }
     }
 }
