@@ -31,14 +31,11 @@ namespace SGBank.BLL
             }
 
             return response;
-
-            account.Balance
         }
 
         public decimal Deposit(int accountNumber)
-        {
+        {   
             
-            return amountDeposited;
         }
     }
 }

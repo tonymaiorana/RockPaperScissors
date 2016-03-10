@@ -10,7 +10,7 @@ namespace SGBank.Workflows
 {
     public class DepositWorkflow
     {
-        private Account _currentAmount;
+        private Account _currentAccount;
 
         public decimal Add()
         {
