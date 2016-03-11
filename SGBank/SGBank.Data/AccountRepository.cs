@@ -31,8 +31,9 @@ namespace SGBank.Data
                 account.LastName = columns[2];
                 account.Balance = decimal.Parse(columns[3]);
                 accounts.Add(account);
-                return accounts;
             }
+
+            return accounts;
         }
 
         public Account GetAccountByNumber(int accountNumber)
