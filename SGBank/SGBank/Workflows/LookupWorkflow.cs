@@ -106,7 +106,10 @@ namespace SGBank.Workflows
         {
             switch (choice)
             {
-                case "1":
+                case "1": DepositWorkflow deposit = new DepositWorkflow(_currentAccount);
+                    _currentAccount = deposit.MakeDeposit();
+                    PrintAccountInformation();
+                    break;
                 case "2":
                 case "3":
                 case "4":

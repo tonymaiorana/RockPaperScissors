@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using SGBank.Data;
@@ -33,9 +34,11 @@ namespace SGBank.BLL
             return response;
         }
 
-        public decimal Deposit(int accountNumber)
-        {   
-            
+        public void MakeDeposit(Account account, decimal amount)
+        {
+            account.Balance += amount;
+            var repo = new AccountRepository();
+            repo.UpdateAccount(account);
         }
     }
 }
